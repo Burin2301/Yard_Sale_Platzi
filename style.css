@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* VARIABLES */
+
+    --VeryLightPink: #c7c7c7;
+    --TextInputFiel: #f7f7f7;
+    --HospitalGreen: #ACD9B2;
+    --White: #ffffff;
+    --Black: #000000;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}

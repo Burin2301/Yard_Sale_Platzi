@@ -10,6 +10,9 @@ const productDetail = document.querySelector('#productDetail')
 // VARIABLE PARA EL BOTON X QUE CIERRA EL PRODUCT DETAIL
 const buttonCloseProductDetail = document.querySelector('#closeProductDetail')
 
+// VAR PARA EL BOTON QUE CIERRA EL SHOPPING CART
+const backbtnShoppingCart = document.querySelector('#closeShoppingCart')
+
 const burgerMenu = document.querySelector(`.menu`)
 const mobileMenu = document.querySelector(`.mobile-menu`)
 const carritoCompras = document.querySelector('#shoppingCartContainer')
@@ -39,13 +42,11 @@ function toggleBurguerMenu(){
 }
 
 function toggleCarritoCompras(){
-    const isMobileMenuClosed = mobileMenu.classList.contains('inactive')
-    const isDesktopMenuClosed = userMenu.classList.contains('inactive')
-       
-    if(!isMobileMenuClosed || !isDesktopMenuClosed ){
-        mobileMenu.classList.add('inactive')
-        userMenu.classList.add('inactive')
-    }
+    
+    mobileMenu.classList.add('inactive')
+    userMenu.classList.add('inactive')
+    productDetail.classList.add('inactive')
+
     carritoCompras.classList.toggle('inactive')
 }
 
@@ -128,6 +129,9 @@ productCard.forEach((card =>{
 
 buttonCloseProductDetail.addEventListener('click', closeProductDetail)
 
+backbtnShoppingCart.addEventListener('click', function(){
+    carritoCompras.classList.add('inactive')
+})
 
 
 function closeProductDetail(){

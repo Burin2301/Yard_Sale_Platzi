@@ -106,12 +106,12 @@
 
 
 
-    width: 100px;
+    width: 130px;
     height: auto;
     border: 1px solid var(--VeryLightPink);
     border-radius: 6px;
     list-style-type: none;
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px;
 }
 .desktop-menu ul{
     list-style-type: none;
@@ -263,6 +263,7 @@
     }
     .title-container img{
         transform: rotate(180deg);
+        cursor: pointer;
     }
 
 /* DETALLE DEL PRODUCT */

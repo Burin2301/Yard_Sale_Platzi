@@ -3,7 +3,8 @@ const userMenu = document.querySelector(`.desktop-menu`)
 const iconCarritoCompras = document.querySelector('.navbar-shopping-cart')
 
 
-
+// VARIABLE PARA LAS TARJETAS DE LOS PRODUCTOS
+const productCard = document.querySelectorAll
 
 const burgerMenu = document.querySelector(`.menu`)
 const mobileMenu = document.querySelector(`.mobile-menu`)
@@ -107,10 +108,7 @@ productsList.forEach((product) => {
         </div>
     `   
     productContainer.innerHTML += productCardContainer
-
-    
-}
-
+    }
 )
 
 

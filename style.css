@@ -335,9 +335,6 @@
     padding: 5px;
     border-radius: 5px;
 }
-.product-card:hover{
-    box-shadow: 0 5px var(--VeryLightPink);
-}
 .product-card img{
     width: 240px;
     height: 240px;

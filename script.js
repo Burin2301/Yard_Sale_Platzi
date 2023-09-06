@@ -2,9 +2,13 @@ const userEmail  = document.querySelector(`.navbar-email`)
 const userMenu = document.querySelector(`.desktop-menu`)
 const iconCarritoCompras = document.querySelector('.navbar-shopping-cart')
 
+let productCard = []
 
-// VARIABLE PARA LAS TARJETAS DE LOS PRODUCTOS
-const productCard = document.querySelectorAll
+// VARIABLE PARA ASIDE PRODUCT DETAIL
+const productDetail = document.querySelector('#productDetail')
+
+// VARIABLE PARA EL BOTON X QUE CIERRA EL PRODUCT DETAIL
+const buttonCloseProductDetail = document.querySelector('#closeProductDetail')
 
 const burgerMenu = document.querySelector(`.menu`)
 const mobileMenu = document.querySelector(`.mobile-menu`)
@@ -92,9 +96,10 @@ productsList.push(
         image:'https://images.pexels.com/photos/1367036/pexels-photo-1367036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     }
 )
+
 productsList.forEach((product) => {
     productCardContainer = `
-        <div class="product-card">
+        <div id="productCard" class="product-card">
         <img src="${product.image}" alt="${product.name}" class="product-img">
         <div class="product-info">
             <div>
@@ -108,18 +113,33 @@ productsList.forEach((product) => {
         </div>
     `   
     productContainer.innerHTML += productCardContainer
+
+    // VARIABLE PARA LAS TARJETAS DE LOS PRODUCTOS
+    productCard = document.querySelectorAll('#productCard')
+
+
     }
 )
 
+productCard.forEach((card =>{
+    card.addEventListener('click', openProductDetail)
+})
+)
+
+buttonCloseProductDetail.addEventListener('click', closeProductDetail)
 
 
 
+function closeProductDetail(){
+    productDetail.classList.add('inactive')
+}
 
+function openProductDetail(){
+    carritoCompras.classList.add('inactive')
+    mobileMenu.classList.add('inactive')
+    userMenu.classList.add('inactive')
 
+    productDetail.classList.remove('inactive')
+}
 
-
-
-
-
-
-
+        

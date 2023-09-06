@@ -254,10 +254,12 @@
     .title{
         font-size: var(--lg);
         font-weight: bold;
-        margin-bottom: 16px;
+        margin-left: 8px;
     }
     .title-container{
         display: flex;
+        align-items: center;
+        margin-bottom: 16px;
     }
     .title-container img{
         transform: rotate(180deg);
@@ -334,6 +336,7 @@
     width: 240px;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .product-card img{
     width: 240px;
@@ -397,6 +400,9 @@
                 height: 140px;
                 border-radius: 20px;
                 object-fit: cover;
+            }
+            #productDetail{
+                width: 100%;
             }
 
         }

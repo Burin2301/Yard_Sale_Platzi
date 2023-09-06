@@ -137,63 +137,68 @@
 
 /* MOBILE MENU */
 
-.mobile-menu{
-    position: absolute;
-    top: 60px; 
+    .mobile-menu{
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background: var(--White);
 
 
-    padding: 24px;
-    flex-direction: column;
-}
-.mobile-menu ul{
-    list-style-type: none ;
-    padding: 0;
-    margin: 0;
-    margin: 24px 0 0 ;
-}
-.mobile-menu ul:nth-child(1){
-    border-bottom: 1px solid var(--VeryLightPink);
-}
-.mobile-menu ul li{
-    margin-bottom: 24px;
-}
-.mobile-menu a{
-    text-decoration: none;
-    color: var(--Black);
-    font-weight: bold; 
-}
-.email-signout .email{
-    font-size: var(--sm);
-    font-weight: 300;
-}
-.email-signout .sign-out{
-    color: var(--HospitalGreen);
-    font-size: var(--sm);
-}
-
-/* CARRITO DE COMPRAS */
-
-
-    .primary-button{
-    background-color: var(--HospitalGreen);
-    border-radius: 8px;
-    border: none;
-    color: var(--White);
-    width: 100%;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
+        width: 100%;
+        padding: 24px;
+        flex-direction: column;
+    }
+    .mobile-menu ul{
+        list-style-type: none ;
+        padding: 0;
+        margin: 0;
+        margin: 24px 0 0 ;
+    }
+    .mobile-menu ul:nth-child(1){
+        border-bottom: 1px solid var(--VeryLightPink);
+    }
+    .mobile-menu ul li{
+        margin-bottom: 24px;
+    }
+    .mobile-menu a{
+        text-decoration: none;
+        color: var(--Black);
+        font-weight: bold; 
+    }
+    .email-signout .email{
+        font-size: var(--sm);
+        font-weight: 300;
+    }
+    .email-signout .sign-out{
+        color: var(--HospitalGreen);
+        font-size: var(--sm);
     }
 
-    .product-detail{
+/* Any Aside */
+    aside{
         width: 360px;
-        padding: 24px;
         position: absolute;
         right: 0;
         background: var(--White);
     }
 
+
+/* CARRITO DE COMPRAS */
+    #shoppingCartContainer{
+        padding: 24px;
+    }
+
+    .primary-button{
+        background-color: var(--HospitalGreen);    
+        border-radius: 8px;
+        border: none;
+        color: var(--White);
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 50px;
+    }    
 
     .my-order-content{
         display: flex;
@@ -246,17 +251,6 @@
         border-radius: 20px;
         object-fit: cover;
     }
-    .primary-button{
-    background-color: var(--HospitalGreen);
-    border-radius: 8px;
-    border: none;
-    color: var(--White);
-    width: 100%;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
-    }
     .title{
         font-size: var(--lg);
         font-weight: bold;
@@ -268,6 +262,64 @@
     .title-container img{
         transform: rotate(180deg);
     }
+
+/* DETALLE DEL PRODUCT */
+.add-to-cart-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+.product-detail{
+    width: 360px;
+    padding-bottom: 24px;
+    position: absolute;
+    right: 0;
+}
+.product-detail>img:nth-child(2){
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}
+.product-detail-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--White);
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 50%;
+}
+.product-detail-close:hover{
+    cursor: pointer;
+}
+#productDetail .product-info{
+    display: block;
+    margin: 24px 24px 0 24px;
+}
+#productDetail .product-info p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin: 0 0 4px;
+}
+#productDetail .product-info p:nth-child(2){
+    color: var(--VeryLightPink);
+    font-size: var(--md);
+    margin: 0 0 36px;
+}
+#productDetail .product-info p:nth-child(3){
+    font-size: var(--sm);
+    color: var(--VeryLightPink);
+    margin: 0 0 36px;
+}
+
+
 
 
 /* LISTA DE PRODUCTOS */
@@ -330,7 +382,7 @@
             .navbar-left ul{
                 display: none;
             }
-            .product-detail{
+            aside{
                 width: 100%;
             }
 

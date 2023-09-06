@@ -7,7 +7,7 @@ const iconCarritoCompras = document.querySelector('.navbar-shopping-cart')
 
 const burgerMenu = document.querySelector(`.menu`)
 const mobileMenu = document.querySelector(`.mobile-menu`)
-const carritoCompras = document.querySelector('.product-detail')
+const carritoCompras = document.querySelector('#shoppingCartContainer')
 
 
 userEmail.addEventListener('click', toggleDesktopMenu)
